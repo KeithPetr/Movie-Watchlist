@@ -1,8 +1,86 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
 }
 
+/* ------------------------- Hero Section --------------------- */
+
+.hero {
+  background-image: url("images/hero-image.jpg");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.4em;
+  height: 200px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5em;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.watchlist-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin-top: 1em;
+}
+
+.hero-title,
+.watchlist-link {
+  text-shadow: 1px 1px 10px #0d0d0d;
+}
+
+/* ----------------------- Search Area --------------------------- */
+
+.search-area {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: -1em;
+  border: 1px solid #D1D5DB;
+}
+
+.magnifying-glass {
+  width: 10%;
+  background-color: #ffffff;
+}
+
+.search-bar {
+  width: 65%;
+  border: none;
+}
+
+.search-button {
+  width: 25%;
+  border: none;
+}
+
+/* ---------------------Movie Results -------------------------- */
+
+.movie-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.film-image {
+    margin-top: -15em;
+}
