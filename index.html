@@ -5,27 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <title>Movie Watchlist</title>
   </head>
   <body>
-
-    <hero class="hero">
-        <div class="hero-text">
-            <h1 class="hero-title">Find your film</h1>
-            <a href="#" class="watchlist-link">My Watchlist</a>
-        </div>
-        <div class="search-area">
-            <img src="images/Magnifying-Glass.png">
-            <input id="search-bar" type="text" placeholder="Search for a movie">
-            <button id="search-button" type="button">Search</button>
-        </div>
-    </hero>
-
-    <section id="movie-results">
-        <img src="images/film.png">
-        <p class="start-exploring">Start exploring</p>
+<!-- --------------- Hero Section --------------------- -->
+    <section class="hero">
+      <div class="hero-text">
+        <h1 class="hero-title">Find your film</h1>
+        <a href="#" class="watchlist-link">My Watchlist</a>
+      </div>
     </section>
-
+<!-- --------------- Search Bar --------------------- -->
+    <div class="search-area">
+      <img class="magnifying-glass" src="images/Magnifying-Glass.png" />
+      <input
+        id="search-bar"
+        class="search-bar"
+        type="text"
+        placeholder="Search for a movie"
+      />
+      <button id="search-button" class="search-button" type="button">
+        Search
+      </button>
+    </div>
+<!-- --------------- Movie Results --------------------- -->
+    <section id="movie-results" class="movie-results">
+      <img class="film-image"src="images/film.png" />
+      <p class="start-exploring">Start exploring</p>
+    </section>
   </body>
   <script src="index.js"></script>
 </html>
