@@ -2,6 +2,8 @@ const apiKey = "33db42b7";
 const searchBtn = document.getElementById("search-button");
 const searchInput = document.getElementById("search-bar");
 const movieResultsEl = document.getElementById("movie-results")
+const imagePlaceholder = document.getElementById("film-image")
+const textPlaceholder = document.getElementById("start-exploring")
 
 let titleArray = [];
 
@@ -28,6 +30,8 @@ function getMovieHtml() {
     fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${title}`)
       .then((res) => res.json())
       .then((data) => {
+        imagePlaceholder.classList.add('none')
+        textPlaceholder.classList.add('none')
         movieResultsEl.innerHTML += `<div class="movie-container">
             <img src='${data.Poster}' alt="movie poster for ${data.Title}">
             <div class="movie-info">
