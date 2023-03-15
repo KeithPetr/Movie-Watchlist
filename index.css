@@ -19,6 +19,23 @@ body {
   align-items: flex-start;
   padding: 0.4em;
   height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* add a semi-transparent background color */
 }
 
 .hero-text {
@@ -27,6 +44,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 1.5em;
+  z-index: 1;
 }
 
 .hero-title {
@@ -53,22 +71,25 @@ body {
   display: flex;
   justify-content: center;
   margin-top: -1em;
-  border: 1px solid #D1D5DB;
+  border: 1px solid #d1d5db;
 }
 
 .magnifying-glass {
   width: 10%;
   background-color: #ffffff;
+  z-index: 1;
 }
 
 .search-bar {
   width: 65%;
   border: none;
+  z-index: 1;
 }
 
 .search-button {
   width: 25%;
   border: none;
+  z-index: 1;
 }
 
 /* ---------------------Movie Results -------------------------- */
@@ -82,5 +103,5 @@ body {
 }
 
 .film-image {
-    margin-top: -15em;
+  margin-top: -15em;
 }
