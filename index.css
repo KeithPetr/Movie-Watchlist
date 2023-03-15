@@ -98,17 +98,26 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   padding-top: 2em;
-  border: 1px solid red;
   text-align: center;
-  height: 100%;
 }
 
 .film-image {
-  margin-top: -15em;
+  margin-top: 5em;
 }
 
 .none {
   display: none;
+}
+
+/* -------------------- Watchlist Page ----------------------- */
+
+.empty-list-text {
+  color: #9a9a9a;
+  margin-top: 5em;
+}
+
+.start-exploring {
+  margin: 0;
 }

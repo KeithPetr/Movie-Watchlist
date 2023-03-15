@@ -37,12 +37,12 @@ function getMovieHtml() {
             <div class="movie-info">
                 <div class="title-rating">
                     <h3 class="title">${data.Title}</h3>
-                    <p class="rating">Star ${data.imdbRating}</p>
+                    <p class="rating">⭐ ${data.imdbRating}</p>
                 </div>
                 <div class="time-genre-watchlist">
                     <p class="time">${data.Runtime}</p>
                     <p class="genre">${data.Genre}</p>
-                    <p id="add-to-list" class="watchlist">Plus</p>
+                    <p id="add-to-list" class="watchlist">➕ Add to Watchlist</p>
                 </div>
                 <p class="plot">${data.Plot}</p>
             </div>
