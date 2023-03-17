@@ -2,9 +2,18 @@
   box-sizing: border-box;
 }
 
+html {
+  background-color: #bdbcbc;
+}
+
 body {
   margin: 0;
   font-family: "Inter", sans-serif;
+  min-width: 320px;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border: 1px solid black;
 }
 
 /* ------------------------- Hero Section --------------------- */
@@ -16,10 +25,9 @@ body {
   color: #ffffff;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   padding: 0.4em;
   height: 200px;
-  background-color: rgba(0, 0, 0, 0.3);
   position: relative;
 }
 
@@ -43,7 +51,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5em;
   z-index: 1;
 }
 
@@ -56,6 +63,11 @@ body {
   color: #ffffff;
   text-decoration: none;
   margin-top: 1em;
+}
+
+.watchlist-link:hover {
+  cursor: pointer;
+  color: #cfd2fa;
 }
 
 .hero-title,
@@ -78,14 +90,14 @@ body {
 .magnifying-glass {
   width: 10%;
   background-color: #ffffff;
-  padding: .1em;
+  padding: 0.1em;
   z-index: 1;
 }
 
 .search-bar {
   width: 65%;
   border: none;
-  padding: .5em;
+  padding: 0 0.5em;
   z-index: 1;
 }
 
@@ -95,19 +107,24 @@ body {
   z-index: 1;
 }
 
+.search-button:hover {
+  cursor: pointer;
+}
+
 /* ---------------------Movie Results -------------------------- */
 
 .movie-results {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   padding-top: 2em;
   text-align: center;
+  min-height: calc(100vh - 255px); /* set the minimum height to fill the viewport minus the height of the hero section */
 }
 
 .film-image {
-  margin-top: 5em;
+ 
 }
 
 .movie-container {
@@ -121,7 +138,7 @@ body {
 }
 
 .movie-poster {
-  width: 70%;
+  width: 50%;
 }
 
 .watchlist {
@@ -135,7 +152,7 @@ body {
 }
 
 .plot {
-  padding: 0 .5em;
+  padding: 0 0.5em;
 }
 
 .none {
@@ -160,4 +177,57 @@ body {
 .remove:hover {
   cursor: pointer;
   color: #6871f1;
+}
+
+/* ------------------- Media Queries ---------------------------*/
+
+@media (min-width: 480px) {
+  body {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    align-items: center;
+  }
+
+  .hero-text {
+    width: 100%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .watchlist-link {
+    margin: 0;
+  }
+
+  .movie-poster {
+    max-width: 50%;
+    aspect-ratio: 1;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+  }
+
+  .search-area {
+    top: -1.2em;
+  }
+
+  .search-bar,
+  .search-button {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .movie-container {
+    display: flex;
+    padding-bottom: 1.35em;
+  }
+
+  .movie-poster {
+    width: 40%;
+    aspect-ratio: 1;
+  }
 }

@@ -2,6 +2,9 @@ const myWatchlist = JSON.parse(localStorage.getItem("watchlist"));
 const watchlistResultsEl = document.getElementById("watchlist-results");
 const removeBtn = document.getElementById("remove");
 
+// --------------------- Functions -----------------------------
+// this function displays either the placeholder text or a list of
+// saved movie data depending on what is stored in local storage
 function addWatchlistHtml(watchlistArray) {
   watchlistResultsEl.innerHTML = "";
   if (watchlistArray.length === 0) {
@@ -43,6 +46,9 @@ if (myWatchlist) {
   addWatchlistHtml(myWatchlist);
 }
 
+// ------------------------ Event Listeners --------------------
+// this listener waits for a click event and then removes that movie
+// data from the myWatchlist array
 document.addEventListener("click", (e) => {
   if (e.target.classList.contains("remove")) {
     const indexOfItem = e.target.dataset.index;
