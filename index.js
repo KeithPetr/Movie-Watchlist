@@ -17,11 +17,13 @@ function search() {
     .then((res) => res.json())
     .then((data) => {
       getTitlesArray(data.Search);
+      console.log(data.Search);
       getMovieHtml(titleArray);
     });
 }
 
 function getTitlesArray(data) {
+  titleArray = [];
   for (let movie of data) {
     titleArray.push(movie.Title);
   }

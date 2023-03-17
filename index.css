@@ -78,12 +78,14 @@ body {
 .magnifying-glass {
   width: 10%;
   background-color: #ffffff;
+  padding: .1em;
   z-index: 1;
 }
 
 .search-bar {
   width: 65%;
   border: none;
+  padding: .5em;
   z-index: 1;
 }
 
@@ -155,3 +157,7 @@ body {
   margin: 5em 0 0;
 }
 
+.remove:hover {
+  cursor: pointer;
+  color: #6871f1;
+}
