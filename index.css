@@ -70,7 +70,8 @@ body {
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  margin-top: -1em;
+  position: relative;
+  top: -1em;
   border: 1px solid #d1d5db;
 }
 
@@ -107,17 +108,50 @@ body {
   margin-top: 5em;
 }
 
+.movie-container {
+  margin-bottom: 1.25em;
+  border-bottom: 1px solid #d6d8dc;
+  width: 90%;
+}
+
+.movie-container:last-child {
+  border: none;
+}
+
+.movie-poster {
+  width: 70%;
+}
+
+.watchlist {
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.watchlist:hover {
+  cursor: pointer;
+  color: #6871f1;
+}
+
+.plot {
+  padding: 0 .5em;
+}
+
 .none {
   display: none;
 }
 
 /* -------------------- Watchlist Page ----------------------- */
 
-.empty-list-text {
-  color: #9a9a9a;
-  margin-top: 5em;
+.watchlist-results {
+  text-align: center;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.start-exploring {
-  margin: 0;
+.empty-list-text {
+  color: #9a9a9a;
+  margin: 5em 0 0;
 }
+
