@@ -1,5 +1,5 @@
 # Movie-Watchlist
-## A Scrimba FrontEnd Developer Path Group Project
+## A Scrimba FrontEnd Developer Path Project
 The project uses the OMDb API to create a search page the returns a list of movies from the terms you enter in the search bar. From the results, the user can read a description of the movie and click on a button to save that movie to their watchlist. The data is stored in local storage so that the user can return later and view the saved movies.
 
 ## Table of Contents
