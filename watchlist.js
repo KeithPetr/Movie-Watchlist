@@ -33,7 +33,7 @@ function addWatchlistHtml(watchlistArray) {
                             <p class="genre">${data.Genre}</p>
                             <p id="remove" class="remove" data-index="${watchlistArray.indexOf(
                               data
-                            )}">➕ Remove from Watchlist</p>
+                            )}">✖️ Remove from Watchlist</p>
                         </div>
                         <p class="plot">${data.Plot}</p>
                     </div>

@@ -118,17 +118,13 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 2em;
+  padding-top: .5em;
   text-align: center;
-  min-height: calc(100vh - 255px); /* set the minimum height to fill the viewport minus the height of the hero section */
-}
-
-.film-image {
- 
+  min-height: calc(100vh - 255px);
 }
 
 .movie-container {
-  margin-bottom: 1.25em;
+  padding: 1em 0;
   border-bottom: 1px solid #d6d8dc;
   width: 90%;
 }
@@ -163,15 +159,16 @@ body {
 
 .watchlist-results {
   text-align: center;
-  margin-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 200px);
 }
 
 .empty-list-text {
   color: #9a9a9a;
-  margin: 5em 0 0;
+  margin: 0;
 }
 
 .remove:hover {
@@ -202,8 +199,7 @@ body {
   }
 
   .movie-poster {
-    max-width: 50%;
-    aspect-ratio: 1;
+    width: 50%;
   }
 
   .hero-title {
@@ -223,11 +219,15 @@ body {
 @media (min-width: 600px) {
   .movie-container {
     display: flex;
-    padding-bottom: 1.35em;
   }
 
   .movie-poster {
-    width: 40%;
-    aspect-ratio: 1;
+    width: 200px;
+    height: 350px;
+    margin: auto 0
+  }
+
+  .movie-info {
+    padding: 0 .5em;
   }
 }
