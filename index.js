@@ -14,7 +14,7 @@ let watchlistArray = JSON.parse(localStorage.getItem("watchlist")) || [];
 // --------------------- Functions -----------------------------
 // this function gets 10 results from the api based on the search term
 function search() {
-  fetch(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput.value}`)
+  fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput.value}`)
     .then((res) => res.json())
     .then((data) => {
       getTitlesArray(data.Search);
@@ -40,7 +40,7 @@ function getTitlesArray(data) {
 function getMovieHtml() {
   movieResultsEl.innerHTML = "";
   for (let title of titleArray) {
-    fetch(`http://www.omdbapi.com/?apikey=${apiKey}&t=${title}`)
+    fetch(`https://www.omdbapi.com/?apikey=${apiKey}&t=${title}`)
       .then((res) => res.json())
       .then((data) => {
         // check if the movie has already been rendered
