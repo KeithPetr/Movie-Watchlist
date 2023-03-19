@@ -14,6 +14,9 @@ let watchlistArray = JSON.parse(localStorage.getItem("watchlist")) || [];
 // --------------------- Functions -----------------------------
 // this function gets 10 results from the api based on the search term
 function search() {
+  if (searchInput.value === "") {
+    return;
+  }
   fetch(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchInput.value}`)
     .then((res) => res.json())
     .then((data) => {
